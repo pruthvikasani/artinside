@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Isotopz</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="js/index.js"></script>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+    <script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("mainpage").style.display = "block";
+}
+</script>
+<!--<body>-->
+   
+<div id="mainpage" style="display:none;">
+         <!---Logo-->
+<!--        <div style="margin-top: 35px;margin-left: 80px;margin-bottom: 35px;"></div>-->
+        <img src="Logo.png" style="width: 150px; height: 100px;margin-left:30px">
+    
+    <!---Searchbar-->    
+        <div class="row" style="float: right;">
+          <div>
+          <form id="demo-2">
+	           <input type="search" placeholder="Search">
+          </form>
+          </div>         
+        
+        <div>
+           <i class="fa fa-twitter circle" style="font-size:30px; margin-right: 3%;"></i>
+            <i class="fa fa-facebook circle" style="font-size:30px; margin-right: 3%;"></i>
+            <i class="fa fa-envelope circle" style="font-size:30px; margin-right: 3%;"></i>
+        </div>
+       </div>
+       
+    <!--Sticky Header---> 
+    <div class="sticky">
+        <nav>
+            <div class="nav-fostrap">
+            <ul>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="javascript:void(0)">SERVICES<span class="arrow-down"></span></a>
+            <ul class="dropdown">
+              <li><a href="">HTML</a></li>
+              <li><a href="">CSS</a></li>
+              <li><a href="">Javascript</a></li>
+              <li><a href="">JQuery</a></li>
+            </ul>
+            </li>
+            <li><a href="javascript:void(0)" >CLIENTS<span class="arrow-down"></span></a>
+            <ul class="dropdown">
+              <li><a href="">Widget</a></li>
+              <li><a href="">Tips</a></li>
+            </ul>
+            </li>
+            <li><a href="javascript:void(0)" >CAREERS<span class="arrow-down"></span></a>
+            <ul class="dropdown">
+              <li><a href="">Tools</a></li>
+              <li><a href="">Backlink</a></li>
+            </ul>
+            </li>
+            <li><a href="">NEWS</a></li>
+            <li><a href="">CONTACT US</a></li>
+            </ul>
+            </div>
+            <div class="nav-bg-fostrap">
+                    <div class="navbar-fostrap"> <span></span> <span></span> <span></span> </div>
+                <h4><a href="index.html" class="title-mobile">Isotopz</a></h4>
+            </div>
+        </nav>
+    </div>
+        <div class="border" id="iamabout">
+        </div>
+    <!---Image Slider--->
+            <div id="demo" class="carousel slide" data-ride="carousel" style="height: 600px;width: 100%;" data-pause="false" data-interval="3000">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active">
+                </li>
+                <li data-target="#demo" data-slide-to="1">
+                </li>
+                <li data-target="#demo" data-slide-to="2">
+                </li>
+            </ul>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="width: 100%;">
+                <img src="sliderimages/1.1" alt="Image 1">
+                </div>
+                <div class="carousel-item" style="width: 100%;">
+                <img src="sliderimages/2.jpg" alt="Image 2">
+                </div>
+                <div class="carousel-item" style="width: 100%;">
+                <img src="sliderimages/3.jpg" alt="Image 3">
+                </div>
+            
+            </div>
+            
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+        
+
+    <!---About Company-->
+        <div class="page2" id="iamabout">
+		      <div class="page2content">
+			         <h1>Description about the Company</h1>
+			         <p>Mauris ex nulla, aliquam ornare facilisis nec convallis pulvinar a non nunc non leo sollicitudin, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida mauris non mi gravida, at sollicitudin odio efficitur.</p>
+		      </div>
+        </div>
+    
+    
+    <!---Services-->
+        <div class="page3" id="iamabout">
+        <div class="page3content">
+			<h1 style="text-align: center; color: black;">Our services</h1>
+            <div class="icons">
+            <div class="float1">
+            <h4 style="margin-top: 5%">Big Data Analytics</h4>
+            <i class="fa fa-line-chart" aria-hidden="true" style="font-size:50px;margin-top: 5%;"></i>
+            </div>
+            <div class="float2">
+            <h4 style="margin-top: 5%">Health Care Solutions</h4>
+			<i class="fa fa-plus-square" aria-hidden="true" style="font-size:50px;margin-top: 5%;"></i>
+            </div>
+              <div class="float4">
+            <h4 style="margin-top: 5%">Program Management</h4>
+			<i class="fa fa-file-text-o" aria-hidden="true" style="font-size:50px;margin-top: 5%;"></i>
+            </div>
+            <div class="float3">
+            <h4 style="margin-top: 5%">Cloud based Services</h4>
+			<i class="fa fa-cloud" aria-hidden="true" style="font-size:50px;margin-top: 5%;"></i>
+            </div>
+<!--
+            <div class="float3">
+            <h3 style="margin-top: 5%">Engineering and Data Science</h3>
+			<i class="fa fa-cloud" aria-hidden="true" style="font-size:60px;margin-top: 5%;"></i>
+            </div>
+-->
+            </div>		
+	   </div>
+       </div>  
+    
+    
+    <!---Footer-->
+         <div class="page4 page" id="iamabout">
+            <div class="footerleft">
+            <h3>Contact us</h3>
+            </div>
+            <div class="footerright">
+            <h4>&copy; Copyrights. All rights reserved.</h4>
+            </div>
+<!--
+              <a href="#top"><i style="font-size:50px;" class="fa fa-arrow-circle-up"></a></i>
+             <script>
+             $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+             
+             
+             </script>
+-->
+        </div>
+    </div>
+</body>
+</html>
