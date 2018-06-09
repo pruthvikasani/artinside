@@ -58,3 +58,12 @@ https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/250192340  By brand
 https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/251233930 By jewellary
 https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/249967416 Categories
 https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/251233929 Watches
+
+https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/250192340 Tanishq
+https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/249967493 Brands
+https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/251985606 Xylys
+https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/251987149 Sonata
+https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/251770266 Titan
+https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/253126054 Fastrack
+https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/253126107 Mia
+https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/251245827 Skinn
