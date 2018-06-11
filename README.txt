@@ -53,6 +53,13 @@ make it happen. And trust me we can make do well in this. Any feedbacks are most
 
 I'll try to describe the way this website works in a better way in few days.
 
+Login page is done partially. 
+Things to do:
+Order page
+Intro page
+Block the back button
+
+
 
 https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/250192340  By brand
 https://projects.invisionapp.com/share/SYCXOVUQ8#/screens/251233930 By jewellary

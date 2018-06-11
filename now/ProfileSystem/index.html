@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="container">
+    <?php
+    if(!isset($_SESSION['id']))
+    {
+    ?>
+    <form action="core/authenticate.php" method="post">
+        <input type="text" name="username" placeholder="Enter your username.."><br />
+         <input type="password" name="password" placeholder="Enter your password.."><br />
+        <input type="submit" value="Login">
+    
+    </form>
+    
+    <?php
+    if(isset($_GET["feedback"]))
+    echo $_GET["feedback"];
+   }
+    ?>
+    
+    <?php if(isset($_SESSION['id'])){ ?>
+    {First Name} {Last Name's} Profile
+    <div id="profilePicture">
+        Profile Profile Here
+    </div>
+    <div id="aboutMe">
+        About me 
+    </div>
+    <div id="next">
+        Age, etc..
+    </div>
+    <?php } ?>
+</div>
+</html>

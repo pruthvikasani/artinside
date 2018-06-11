@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6, a {
     box-sizing: border-box;
 }
 
-.login-form input[type="button"] {
+.login-form input[type="submit"] {
   height:30px;
   width:100px;
   background:#fff;
@@ -74,6 +74,10 @@ h1, h2, h3, h4, h5, h6, a {
   cursor:pointer;
   background-color: #4CAF50;
   color: white;
+}
+.error{
+    
+    color: black;
 }
 .sign-up{
   color: slategrey;
@@ -105,4 +109,16 @@ h1, h2, h3, h4, h5, h6, a {
   .login-button {
     margin-bottom:10px;
   }
+}
+
+
+
+
+
+.content{
+    color: black;
+}
+
+.error success{
+    color: black;
 }

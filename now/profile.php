@@ -1,0 +1,369 @@
+<?php include('server.php'); ?>
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:500,600" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f1deda;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(0,0,0,0.8);
+}
+.pfl-wrapper {
+  display: block;
+  width: auto;
+  height: 100%;
+  padding: 40px;
+  margin: 50px;
+  background-color: #f1deda;
+  box-shadow: 0 0 50px rgba(0,0,0,0.08);
+  overflow: auto;
+}
+#nav {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  width: auto;
+  height: auto;
+}
+#nav:hover .nav-icon span {
+  width: 100%;
+}
+#nav:hover .nav-icon span:before,
+#nav:hover .nav-icon span:after {
+  width: 100%;
+  transition: all 0.25s;
+}
+#nav .nav-icon {
+  display: block;
+  width: 30px;
+  height: 17px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+#nav .nav-icon:after {
+  display: block;
+  
+  padding-left: 45px;
+  line-height: 15px;
+}
+#nav .nav-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+}
+#nav .nav-icon span:before,
+#nav .nav-icon span:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0,0,0,0.7);
+  transition: all 0.25s;
+}
+#nav .nav-icon span:before {
+  margin-top: 7px;
+  width: 80%;
+}
+#nav .nav-icon span:after {
+  margin-top: 5px;
+  width: 60%;
+}
+#nav .hire-me {
+  display: block;
+  position: absolute;
+  top: 34px;
+  right: 50px;
+  padding-right: 10px;
+}
+#nav .hire-me:after {
+  display: block;
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+}
+article {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 50px 0;
+  overflow: auto;
+}
+article .profile-photo {
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+  background-image: url("http://nickylew.com/wp-content/uploads/2017/05/nickylew-2017.jpg");
+  background-size: 230%;
+  background-position: 80% 0%;
+  background-repeat: no-repeat;
+}
+article .profile-info {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+article .profile-info h1 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: 0.5em;
+}
+article .people,
+article .posts {
+  display: inline-block;
+  width: 100%;
+  margin: 60px 0 0;
+  float: left;
+}
+article .people .round-tile {
+  display: inline-block;
+  float: left;
+  margin-bottom: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+article .people .round-tile:hover {
+  text-decoration: none;
+}
+article .people .round-tile:hover .roundal {
+  box-shadow: 0 0 50px rgba(0,0,0,0.08);
+  transition: box-shadow 0.25s;
+}
+article .people .round-tile:hover h4 {
+  color: #0275d8;
+  transition: color 0.25s;
+  text-decoration: none;
+}
+article .people .round-tile .roundal {
+  display: block;
+  margin: 0 auto 10px;
+  width: 90px;
+  height: 90px;
+  background-color: #363636;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  transition: box-shadow 0.25s;
+}
+article .people .round-tile .roundal.twitter {
+  background-color: #1da1f2;
+  background-image: url("http://www.macdrifter.com/theme/images/twitter-snow.svg");
+  background-size: 50% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+article .people .round-tile .roundal.codepen {
+  background-color: #000;
+  background-image: url("https://www.shareicon.net/download/2016/11/03/849433_codepen_512x512.png");
+  background-size: 115% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+article .people .round-tile .roundal.instagram {
+  background-color: transparent;
+  background-image: url("http://sevenfiguresocial.com/wp-content/uploads/2016/08/instagram_gradient_wallpaper_by_jasonzigrino-da28exh-550x400.png");
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+article .people .round-tile .roundal.instagram:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://sirgo.org/images/instagram-black-and-white-cliparts-11.png");
+  background-size: 50% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+article .people .round-tile h4 {
+  font-size: 1.1em;
+  color: rgba(32,32,32,0.6);
+  transition: color 0.25s;
+  text-decoration: none;
+}
+article .posts .tile {
+  display: inline-block;
+  float: left;
+  margin-bottom: 30px;
+}
+article .posts .tile:nth-of-type(2n+1) {
+  clear: both;
+}
+article .posts .tile .inner {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.25s;
+}
+article .posts .tile .inner img {
+  width: 100%;
+  height: auto;
+}
+article .posts .tile .inner h4 {
+  font-size: 1.1em;
+  line-height: 1.4em;
+  padding: 20px 15px 10px;
+  transition: color 0.25s;
+}
+article .posts .tile .inner:hover {
+  box-shadow: 0 0 50px rgba(0,0,0,0.08);
+  transition: box-shadow 0.25s;
+}
+article .posts .tile .inner:hover h4 {
+  color: #0275d8;
+  transition: color 0.25s;
+}
+@media (min-width: 992px) {
+  article .people .round-tile:nth-of-type(2) {
+    transform: translateY(80px) translateX(-20%);
+  }
+  article .people .round-tile:nth-of-type(3) {
+    transform: translateY(20px);
+  }
+}
+@media (min-width: 1200px) {
+  article .people .round-tile:nth-of-type(2) {
+    transform: translateY(80px) translateX(-40%);
+  }
+}
+@media (min-width: 1400px) {
+  article .people .round-tile:nth-of-type(2) {
+    transform: translateY(80px) translateX(-50%);
+  }
+}
+@media (max-width: 480px) {
+  .pfl-wrapper {
+    margin: 30px;
+    padding: 40px 0 0;
+  }
+  article .profile-info {
+    padding: 0 30px;
+  }
+  #nav .nav-icon {
+    top: 10px;
+    left: 10px;
+  }
+  #nav .hire-me {
+    top: 5px;
+    right: 10px;
+  }
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="pfl-wrapper">
+	<nav id="nav">
+		<div class="nav-icon">Menu<span></span></div>
+		<div class="hire-me">Hire me</div>
+          <?php 
+          if(isset($_SESSION['success'])): ?>
+        <h4>
+          <?php 
+          echo $_SESSION['success'];
+          unset($_SESSION['success']);
+          
+          ?>
+        </h4>
+        <?php endif ?>
+           <?php if(isset($_SESSION['username'])): ?>
+          <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+          <p><a href="register.php?logout='1'" style="color: darkblue;">Logout</a></p>
+          <?php endif ?>
+	</nav>
+	<article>
+		<div class="profile-photo"></div>
+		<div class="profile-info">
+			<h1>Nick Lewis</h1>
+			<p>Creative technologist <a href="http://fiascodesign.co.uk/" target="_blank">@FiascoDesign</a>. Maker of web things. Joint owner <a href="http://mountainandco.uk/" target="_blank">@mountainandco</a>.</p>
+		</div>
+		<div class="col-xs-12">
+			<div class="col-md-6 people">
+				<a href="https://codepen.io/nickylew/" class="col-xs-12 col-lg-6 round-tile">
+					<div class="roundal codepen"></div>
+					<h4>CodePen</h4>
+				</a>
+				<a href="https://www.instagram.com/nickylewlew/" class="col-xs-12 col-lg-6 round-tile">
+					<div class="roundal instagram"></div>
+					<h4>Instagram</h4>
+				</a>
+				<a href="https://twitter.com/nickylewlew/" class="col-xs-12 col-lg-6 round-tile">
+					<div class="roundal twitter"></div>
+					<h4>Twitter</h4>
+				</a>
+			</div>
+			<div class="col-md-6 posts">
+				<div class="col-xs-12 col-lg-12 col-xl-6 tile">
+					<div class="inner">
+						<img src="http://nickylew.com/wp-content/uploads/2016/04/app.gif"/>
+						<h4>Improving UX width animation</h4>
+					</div>
+				</div>
+				<div class="col-xs-12 col-lg-12 col-xl-6 tile">
+					<div class="inner">
+						<img src="http://nickylew.com/wp-content/uploads/2016/12/yes-man-900x600.jpeg"/>
+						<h4>Learning how to be a yes man</h4>
+					</div>
+				</div>
+				<div class="col-xs-12 col-lg-12 col-xl-6 tile">
+					<div class="inner">
+						<img src="http://nickylew.com/wp-content/uploads/2015/07/Studio-3.jpg"/>
+						<h4>Life as a designer and developer</h4>
+					</div>
+				</div>
+				<div class="col-xs-12 col-lg-12 col-xl-6 tile">
+					<div class="inner">
+						<img src="http://nickylew.com/wp-content/uploads/2015/07/AppleWatch.jpg"/>
+						<h4>What does the future hold for UI?</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
+  
+  
+
+</body>
+
+</html>

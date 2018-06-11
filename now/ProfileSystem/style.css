@@ -1,0 +1,28 @@
+#container{
+    
+    position: relative;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    background-color: #ccc;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#profilePicture{
+    float: left;
+    margin-left: 50px;
+    width: 250px;
+}
+
+#aboutMe{
+    float: right;
+    margin-right: 50px;
+    width: 600px;
+}
+
+#next{
+    clear: both;
+}
