@@ -148,6 +148,13 @@
       -webkit-animation-duration: 1s;
       visibility: visible;
   }
+
+
+.responsive {
+      width: 100%;
+    max-width: 400px;
+    height: auto;
+}
   @keyframes slide {
     0% {
       opacity: 0;
