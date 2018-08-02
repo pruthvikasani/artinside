@@ -49,7 +49,7 @@ Pruthvi - Web dev
 Last but not the least, 
 I have received messages from many people asking that, why isn't the website working. So, I have 
 decided to re-launch it in a better way than the earlier one. I need you people's active participation to 
-make it happen. And trust me we can make do well in this. Any feedbacks are most welcome.
+make it happen. And trust me we can do well in this. Any feedbacks are most welcome.
 
 I'll try to describe the way this website works in a better way in few days.
 
